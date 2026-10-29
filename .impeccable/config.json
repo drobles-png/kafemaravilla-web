@@ -1,0 +1,35 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "italic-serif-display",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-29T02:05:17.824Z",
+        "reason": "Claude: h1 is roman Arvo; only the single word 'flow' is italic as a brand accent"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-29T02:05:18.188Z",
+        "reason": "Claude: full-bleed sections/strip; text is inset by .wrap gutter (16-40px) and marquee is intentionally edge-to-edge"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-29T02:05:18.542Z",
+        "reason": "Claude: cream comes from the client's brand (packaging/logo mustard family), not a default"
+      }
+    ]
+  }
+}

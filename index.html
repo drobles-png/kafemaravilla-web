@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kafé Maravilla — Café arábico de Jipijapa, Manabí</title>
+  <meta name="description" content="Café 100% arábica lavado de Jipijapa, Manabí. En grano o molido, 500 g a $10. Pide por WhatsApp con envío en Guayaquil." />
+  <meta name="theme-color" content="#1b2e3f" />
+  <meta property="og:title" content="Kafé Maravilla — Café arábico con flow ecuatoriano" />
+  <meta property="og:description" content="100% arábica lavado de Jipijapa, Manabí. En grano o molido, 500 g a $10." />
+  <meta property="og:image" content="assets/img/cafe-grano.jpg" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preload" href="assets/fonts/Arvo-Regular.ttf" as="font" type="font/ttf" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Oculta lo que GSAP anima al entrar; si GSAP no carga, se muestra igual a los 2.5 s
+    if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.documentElement.classList.add("js-anim");
+      setTimeout(() => document.documentElement.classList.remove("js-anim"), 2500);
+    }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#productos">Saltar a los productos</a>
+
+  <header class="nav" id="top">
+    <div class="wrap nav__in">
+      <a class="brand" href="#top" aria-label="Kafé Maravilla, inicio">
+        <img src="assets/img/logo-mark.webp" alt="" width="52" height="31" />
+        <span>Kafé Maravilla</span>
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="#productos">Café</a>
+        <a href="#origen">Origen</a>
+        <a href="#donde">Dónde tomarlo</a>
+        <a href="#pedir">Cómo pedir</a>
+      </nav>
+      <button class="cart-btn" type="button" data-open-cart aria-label="Abrir pedido">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+        <span class="cart-btn__label">Mi pedido</span>
+        <span class="cart-btn__count" data-cart-count>0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero__in">
+        <div class="hero__copy">
+          <p class="eyebrow" data-intro>Jipijapa · Manabí · Ecuador</p>
+          <h1 data-intro>Café arábico con <em>flow</em> ecuatoriano.</h1>
+          <p class="lead" data-intro>Si lo sabes distinguir, este es para ti. 100% arábica lavado, tostado para que cada taza sepa a lo que es: café de verdad.</p>
+          <div class="hero__cta" data-intro>
+            <a class="btn btn--primary" href="#productos">Pedir mi café · $10</a>
+            <a class="btn btn--ghost" href="#origen">Conocer el origen</a>
+          </div>
+          <ul class="hero__facts" data-intro>
+            <li><strong>500 g</strong> por funda</li>
+            <li><strong>Grano</strong> o molido</li>
+            <li><strong>Envíos</strong> en Guayaquil</li>
+          </ul>
+        </div>
+        <div class="hero__art">
+          <div class="hero__glow" aria-hidden="true"></div>
+          <div class="logo-anim" data-logo role="img" aria-label="Logo de Kafé Maravilla: rama de café con cerezas">
+            <div class="logo-anim__wing logo-anim__wing--l"><img src="assets/img/logo/hojas-izq.webp" alt="" /></div>
+            <div class="logo-anim__wing logo-anim__wing--r"><img src="assets/img/logo/hojas-der.webp" alt="" /></div>
+            <img class="logo-anim__core" src="assets/img/logo/racimo.webp" alt="" />
+            <img class="logo-anim__cherry" src="assets/img/logo/cereza-0.webp" alt="" style="left:37.29%;top:29.29%;width:12.82%" />
+            <img class="logo-anim__cherry" src="assets/img/logo/cereza-1.webp" alt="" style="left:48.59%;top:30.13%;width:13.65%" />
+            <img class="logo-anim__cherry" src="assets/img/logo/cereza-2.webp" alt="" style="left:28.94%;top:43.72%;width:13.06%" />
+            <img class="logo-anim__cherry" src="assets/img/logo/cereza-3.webp" alt="" style="left:55.06%;top:43.72%;width:15.41%" />
+            <img class="logo-anim__cherry" src="assets/img/logo/cereza-4.webp" alt="" style="left:40.12%;top:45.82%;width:16%" />
+            <img class="logo-anim__cherry" src="assets/img/logo/cereza-5.webp" alt="" style="left:48.59%;top:60.46%;width:16.71%" />
+            <img class="logo-anim__cherry" src="assets/img/logo/cereza-6.webp" alt="" style="left:32.59%;top:61.3%;width:16.24%" />
+            <img class="logo-anim__cherry" src="assets/img/logo/cereza-7.webp" alt="" style="left:40.24%;top:76.99%;width:16.71%" />
+          </div>
+          <svg class="dots" viewBox="0 0 400 40" aria-hidden="true"><g fill="currentColor"><circle cx="10" cy="6" r="3"/><circle cx="58" cy="16" r="3"/><circle cx="106" cy="24" r="3"/><circle cx="154" cy="30" r="3"/><circle cx="200" cy="32" r="3"/><circle cx="246" cy="30" r="3"/><circle cx="294" cy="24" r="3"/><circle cx="342" cy="16" r="3"/><circle cx="390" cy="6" r="3"/></g></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- STRIP -->
+    <div class="strip" aria-hidden="true">
+      <div class="strip__track">
+        <span>100% Arábica lavado</span><span>✦</span><span>Origen Jipijapa, Manabí</span><span>✦</span><span>Tostado en Ecuador</span><span>✦</span><span>En grano o molido</span><span>✦</span>
+        <span>100% Arábica lavado</span><span>✦</span><span>Origen Jipijapa, Manabí</span><span>✦</span><span>Tostado en Ecuador</span><span>✦</span><span>En grano o molido</span><span>✦</span>
+      </div>
+    </div>
+
+    <!-- PRODUCTOS -->
+    <section class="section products" id="productos">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="eyebrow eyebrow--dark">Nuestro café</p>
+          <h2>Un mismo café, dos formas de prepararlo.</h2>
+          <p>Elige cómo lo quieres. Arma tu pedido aquí y nos llega directo a WhatsApp.</p>
+        </header>
+
+        <div class="product-grid">
+          <article class="product" data-product="grano">
+            <div class="product__media product__media--teal">
+              <img src="assets/img/bolsa-grano.webp" alt="Funda de Kafé Maravilla Café Tostado en Grano, 500 g" width="470" height="670" loading="lazy" />
+            </div>
+            <div class="product__body">
+              <p class="product__tag">Para moler en casa</p>
+              <h3>Café Tostado en Grano</h3>
+              <p class="product__desc">El grano entero guarda todo el aroma hasta el momento de molerlo. Si tienes molino, este es el tuyo.</p>
+              <ul class="product__specs">
+                <li>100% arábica lavado</li>
+                <li>Funda de 500 g</li>
+              </ul>
+              <div class="product__buy">
+                <p class="price"><span>$</span>10<small>.00</small></p>
+                <div class="qty" role="group" aria-label="Cantidad de café en grano">
+                  <button type="button" data-step="-1" aria-label="Quitar una">−</button>
+                  <output data-qty>1</output>
+                  <button type="button" data-step="1" aria-label="Agregar una">+</button>
+                </div>
+              </div>
+              <button class="btn btn--primary btn--block" type="button" data-add>Agregar al pedido</button>
+            </div>
+          </article>
+
+          <article class="product" data-product="molido">
+            <div class="product__media product__media--navy">
+              <img src="assets/img/bolsa-molido.webp" alt="Funda de Kafé Maravilla Café Tostado Molido, 500 g" width="320" height="465" loading="lazy" />
+            </div>
+            <div class="product__body">
+              <p class="product__tag">Listo para preparar</p>
+              <h3>Café Tostado Molido</h3>
+              <p class="product__desc">Abre la funda y prepara. Va bien en cafetera de goteo, greca, prensa francesa o filtro.</p>
+              <ul class="product__specs">
+                <li>100% arábica lavado</li>
+                <li>Funda de 500 g</li>
+              </ul>
+              <div class="product__buy">
+                <p class="price"><span>$</span>10<small>.00</small></p>
+                <div class="qty" role="group" aria-label="Cantidad de café molido">
+                  <button type="button" data-step="-1" aria-label="Quitar una">−</button>
+                  <output data-qty>1</output>
+                  <button type="button" data-step="1" aria-label="Agregar una">+</button>
+                </div>
+              </div>
+              <button class="btn btn--primary btn--block" type="button" data-add>Agregar al pedido</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORIGEN -->
+    <section class="section origin" id="origen">
+      <div class="wrap origin__in">
+        <figure class="origin__photo">
+          <img src="assets/img/tostado.webp" alt="Granos de café saliendo de la tostadora" loading="lazy" width="1600" height="1067" />
+        </figure>
+        <div class="origin__copy">
+          <p class="eyebrow">Origen</p>
+          <h2>Desde las lomas de Jipijapa hasta tu taza.</h2>
+          <p>Kafé Maravilla nace en Jipijapa, Manabí, tierra de café. Seleccionamos granos de arábica y los procesamos por vía húmeda (lavado). Así sale una taza limpia, dulce y con cuerpo, sin el amargo de los cafés comerciales.</p>
+          <p>Cada funda se hace para un momento que vale la pena: conectar, disfrutar y vivir el presente.</p>
+          <dl class="origin__data">
+            <div><dt>Variedad</dt><dd>Arábica</dd></div>
+            <div><dt>Proceso</dt><dd>Lavado</dd></div>
+            <div><dt>Región</dt><dd>Manabí</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="gallery" aria-label="Momentos de café">
+      <figure><img src="assets/img/granos.webp" alt="Granos de café tostado" loading="lazy" /></figure>
+      <figure><img src="assets/img/grano-molido.webp" alt="Café en grano, molido y un latte sobre tabla de madera" loading="lazy" /></figure>
+      <figure><img src="assets/img/filtrado.webp" alt="Café filtrado preparándose en una cafetería" loading="lazy" /></figure>
+      <figure><img src="assets/img/taza.webp" alt="Dos capuchinos con arte latte" loading="lazy" /></figure>
+    </section>
+
+    <!-- DÓNDE -->
+    <section class="section where" id="donde">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="eyebrow eyebrow--dark">Ya lo sirven en Guayaquil</p>
+          <h2>Las cafeterías que lo distinguen.</h2>
+          <p>Si quieres probarlo antes de llevarte una funda, pídelo en:</p>
+        </header>
+        <ul class="where__list">
+          <li>El Dólar</li>
+          <li>La Española</li>
+          <li>Bankers Club</li>
+          <li>LFG</li>
+        </ul>
+        <p class="where__note">¿Tienes una cafetería o restaurante? <a href="#" data-wa-business>Escríbenos para precios por volumen</a>.</p>
+      </div>
+    </section>
+
+    <!-- CÓMO PEDIR -->
+    <section class="section how" id="pedir">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="eyebrow">Cómo pedir</p>
+          <h2>Tu café en tres pasos.</h2>
+        </header>
+        <ol class="steps">
+          <li>
+            <span class="steps__n">1</span>
+            <h3>Elige</h3>
+            <p>Grano o molido, las fundas que quieras. Cada una cuesta $10.</p>
+          </li>
+          <li>
+            <span class="steps__n">2</span>
+            <h3>Completa tus datos</h3>
+            <p>Nombre, teléfono y dirección. Toma menos de un minuto.</p>
+          </li>
+          <li>
+            <span class="steps__n">3</span>
+            <h3>Confirma por WhatsApp</h3>
+            <p>Te llega el pedido listo para enviar. Coordinamos el pago y la entrega por ahí.</p>
+          </li>
+        </ol>
+        <div class="how__cta">
+          <button class="btn btn--primary" type="button" data-open-cart>Ver mi pedido</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__in">
+      <div class="footer__brand">
+        <img src="assets/img/logo-mark.webp" alt="" width="120" height="71" loading="lazy" />
+        <p class="footer__name">Kafé Maravilla</p>
+        <p>Café arábico con flow ecuatoriano.</p>
+      </div>
+      <div>
+        <p class="footer__title">Síguenos</p>
+        <ul class="footer__links">
+          <li><a href="https://www.instagram.com/kafemaravilla.ec/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.threads.com/@kafemaravilla.ec" target="_blank" rel="noopener">Threads</a></li>
+          <li><a href="https://www.tiktok.com/@kafemaravilla.ec" target="_blank" rel="noopener">TikTok</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__title">Pedidos</p>
+        <ul class="footer__links">
+          <li><a href="#" data-wa-business>WhatsApp</a></li>
+          <li>Guayaquil, Ecuador</li>
+        </ul>
+      </div>
+    </div>
+    <p class="wrap footer__legal">© <span data-year></span> Kafé Maravilla. Jipijapa, Manabí.</p>
+  </footer>
+
+  <!-- Barra móvil -->
+  <div class="mobile-bar" data-mobile-bar hidden>
+    <span><strong data-cart-total>$0</strong> · <span data-cart-units>0 fundas</span></span>
+    <button class="btn btn--primary" type="button" data-open-cart>Ver pedido</button>
+  </div>
+
+  <!-- PEDIDO -->
+  <div class="drawer" data-drawer aria-hidden="true">
+    <div class="drawer__scrim" data-close-cart></div>
+    <aside class="drawer__panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title" tabindex="-1">
+      <header class="drawer__head">
+        <h2 id="drawer-title">Tu pedido</h2>
+        <button class="icon-btn" type="button" data-close-cart aria-label="Cerrar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </header>
+
+      <div class="drawer__body">
+        <div class="cart-empty" data-cart-empty>
+          <img src="assets/img/logo-mark.webp" alt="" width="140" height="83" />
+          <p>Tu pedido está vacío.</p>
+          <a class="btn btn--ghost-dark" href="#productos" data-close-cart>Elegir café</a>
+        </div>
+
+        <ul class="cart-list" data-cart-list></ul>
+
+        <form class="order-form" data-order-form novalidate hidden>
+          <fieldset>
+            <legend>¿Cómo lo recibes?</legend>
+            <div class="seg">
+              <label><input type="radio" name="entrega" value="Envío a domicilio" checked /><span>Envío a domicilio</span></label>
+              <label><input type="radio" name="entrega" value="Retiro" /><span>Retiro</span></label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="f-nombre">Nombre y apellido</label>
+            <input id="f-nombre" name="nombre" autocomplete="name" required />
+            <p class="field__err">Escribe tu nombre.</p>
+          </div>
+          <div class="field">
+            <label for="f-tel">Teléfono / WhatsApp</label>
+            <input id="f-tel" name="telefono" type="tel" inputmode="tel" autocomplete="tel" placeholder="09XXXXXXXX" required pattern="^(\+?593|0)?9\d{8}$" />
+            <p class="field__err">Escribe un celular válido, por ejemplo 0991234567.</p>
+          </div>
+          <div class="field" data-delivery-only>
+            <label for="f-dir">Dirección</label>
+            <input id="f-dir" name="direccion" autocomplete="street-address" placeholder="Calle, número, referencia" required />
+            <p class="field__err">Necesitamos la dirección para el envío.</p>
+          </div>
+          <div class="field" data-delivery-only>
+            <label for="f-sector">Ciudad / sector</label>
+            <input id="f-sector" name="sector" placeholder="Ej. Urdesa, Samborondón" required />
+            <p class="field__err">Indícanos la ciudad o el sector.</p>
+          </div>
+          <fieldset>
+            <legend>Forma de pago</legend>
+            <div class="seg">
+              <label><input type="radio" name="pago" value="Transferencia" checked /><span>Transferencia</span></label>
+              <label><input type="radio" name="pago" value="Efectivo contra entrega" /><span>Efectivo</span></label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="f-notas">Notas <span class="opt">(opcional)</span></label>
+            <textarea id="f-notas" name="notas" rows="2" placeholder="Horario de entrega, factura, etc."></textarea>
+          </div>
+        </form>
+      </div>
+
+      <footer class="drawer__foot" data-cart-foot hidden>
+        <div class="total">
+          <span>Subtotal</span>
+          <strong data-cart-total>$0</strong>
+        </div>
+        <p class="total__note">El costo de envío te lo confirmamos por WhatsApp.</p>
+        <button class="btn btn--wa btn--block" type="button" data-submit-order>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/><path d="M8.5 8.5c.3 2.6 2.4 5 5 5.8l1.2-1.2 2 1-.3 1.4c-4 .4-8.2-3.8-7.8-7.8l1.4-.3 1 2-1.2 1.2" /></svg>
+          Enviar pedido por WhatsApp
+        </button>
+      </footer>
+    </aside>
+  </div>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="app.js"></script>
+  <script src="anim.js"></script>
+</body>
+</html>
